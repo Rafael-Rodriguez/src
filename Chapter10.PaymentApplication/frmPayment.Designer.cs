@@ -113,12 +113,14 @@
             // _txtBoxCardNumber
             // 
             this._txtBoxCardNumber.Location = new System.Drawing.Point(147, 269);
-            this._txtBoxCardNumber.MaxLength = 19;
+            this._txtBoxCardNumber.MaxLength = 16;
             this._txtBoxCardNumber.Name = "_txtBoxCardNumber";
             this._txtBoxCardNumber.Size = new System.Drawing.Size(353, 22);
             this._txtBoxCardNumber.TabIndex = 4;
+            this._txtBoxCardNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnCreditCardNumberKeyDown);
             this._txtBoxCardNumber.Leave += new System.EventHandler(this.OnLeaveFocus);
             this._txtBoxCardNumber.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnTextBoxCardNumberMouseDown);
+            this._txtBoxCardNumber.Validating += new System.ComponentModel.CancelEventHandler(this.OnCreditCardNumberValidating);
             // 
             // _lblExpirationDate
             // 
